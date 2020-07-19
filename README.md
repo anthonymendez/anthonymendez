@@ -1,4 +1,8 @@
-### Hi there 👋
+### Hello! I'm Anthony!
+
+<hr />
+
+#### Stereotypical Programming Nerd!
 
 <!--
 **anthonymendez/anthonymendez** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
