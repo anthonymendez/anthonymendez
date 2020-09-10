@@ -1,8 +1,10 @@
-### Hello! I'm Anthony!
+### Hello World! I'm Anthony!
 
 <hr />
 
 #### Stereotypical Programming Nerd!
+
+I'm a Software Engineer based in the US! I have experience with Java, Python, C, C++, and others! I love solving problems, reading about interesting tech, playing video games (and trying to make video games).
 
 <!--
 **anthonymendez/anthonymendez** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
