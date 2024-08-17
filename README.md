@@ -1,5 +1,7 @@
 Hello! I'm Anthony. Software Engineer @ Google and sometimes creator of personal projects.
 
+Most of my obsessions as of late have been messing around with Windows and Linux.
+
 Here's a list of some projects on my profile:
 * College Asignments
 * C programs
