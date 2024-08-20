@@ -7,5 +7,5 @@ Here's a list of some projects on my profile:
 * C programs
 * Unity (C#) Game Projects
 * Python Projects (Web Servers, Minecraft server wrapper, etc.)
-* Guides e.g.: [NR2003 on Linux](https://github.com/anthonymendez/NR2003-on-Linux)
+* Guides e.g.: [NR2003 on Linux](https://github.com/anthonymendez/NR2003-on-Linux), [Improve Windows 11](https://github.com/anthonymendez/Improve-Windows-11)
 * Minecraft Mods in Java
