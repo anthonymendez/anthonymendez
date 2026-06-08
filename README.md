@@ -1,4 +1,4 @@
-Hello! I'm Anthony. Software Engineer @ Google and sometimes creator of personal projects.
+Hiya! I'm Anthony. Software Engineer @ Google and sometimes creator of personal projects. I also have a personal blog site: https://anthonymendez.dev/
 
 Most of my obsessions as of late have been messing around with Windows and Linux.
 
