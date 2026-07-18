@@ -2,7 +2,10 @@ Hiya! I'm Anthony. Software Engineer @ Google and sometimes creator of personal 
 
 Most of my obsessions as of late have been messing around with Windows and Linux.
 
-Here's a list of some projects on my profile:
+Current projects:
+* [Scene Tree View for OBS](https://github.com/anthonymendez/scene-tree-view/issues) - Fork of the original project. Attempting to maintain with regular updates and feature requests.
+
+Here's a list of some older projects:
 * College Asignments
   * [UMass 2020 WeatherBox Site Code](https://github.com/anthonymendez/WeatherBox_SDP_Site)
 * C programs
