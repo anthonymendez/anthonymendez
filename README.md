@@ -1,27 +1,33 @@
-Hiya! I'm Anthony. Software Engineer @ Google and sometimes creator of personal projects. I also have a personal blog site: https://anthonymendez.dev/
+<div align="center">
 
-Most of my obsessions as of late have been messing around with Windows and Linux.
+# Hey, I'm Anthony! 👋
 
-Current projects:
+**Software Engineer @ Google** · Hobbyist creator · Linux & Windows tinkerer
 
-- [Scene Tree View for OBS](https://github.com/anthonymendez/scene-tree-view/issues) - Fork of the original project. Attempting to maintain with regular updates and feature requests.
+[![Website](https://img.shields.io/badge/anthonymendez.dev-000000?style=for-the-badge&logo=safari&logoColor=white)](https://anthonymendez.dev/)
 
-Here's a list of some older projects:
+</div>
 
-- College Asignments
-  - [UMass 2020 WeatherBox Site Code](https://github.com/anthonymendez/WeatherBox_SDP_Site)
-- C programs
-  - [WeatherBox Firmware](https://github.com/anthonymendez/WeatherBox_Firmware)
-  - [CCS811 Driver](https://github.com/anthonymendez/CCS811_C_Driver)
-- Unity (C#) Game Projects
-  - [Vector Shot](https://github.com/anthonymendez/Vector-Shot)
-- Python Projects
-  - [PyCraftServerManager](https://github.com/anthonymendez/PyCraftServerManager)
-  - [mcloady](https://github.com/rubennp91/mcloady)
-  - [Server Manager](https://github.com/anthonymendez/Server_Manager)
-- Guides
-  - [NR2003 on Linux](https://github.com/anthonymendez/NR2003-on-Linux)
-  - [Improve Windows 11](https://github.com/anthonymendez/Improve-Windows-11)
-- Minecraft Mods in Java
-  - [Simple Coins](https://github.com/anthonymendez/Simple-Coins-MinecraftMod)
-  - [Toeknee's Simple Tools](https://github.com/anthonymendez/Toeknee-s-Simple-Tools)
+---
+
+### 🔨 Latest Projects I've Been Working On
+
+<!--START_SECTION:working-on-->
+_This section updates automatically – check back soon!_
+<!--END_SECTION:working-on-->
+
+---
+
+### 🤝 Latest Projects I've Contributed To
+
+<!--START_SECTION:contributed-to-->
+_This section updates automatically – check back soon!_
+<!--END_SECTION:contributed-to-->
+
+---
+
+### ⭐ Most Starred Projects
+
+<!--START_SECTION:most-starred-->
+_This section updates automatically – check back soon!_
+<!--END_SECTION:most-starred-->
