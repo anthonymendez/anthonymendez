@@ -28,9 +28,15 @@
 - 🍴 Forked [**brunyman/LockettePro**](https://github.com/brunyman/LockettePro)
 - 🍴 Forked [**theca11/multi-obs-controller**](https://github.com/theca11/multi-obs-controller)
 - 📬 Opened a pr in [**nekename/OpenDeck**](https://github.com/nekename/OpenDeck)
-- ⭐ Starred [**Hkshoonya/nvidia-broadcast-linux**](https://github.com/Hkshoonya/nvidia-broadcast-linux)
-- ⭐ Starred [**samuelgursky/davinci-resolve-mcp**](https://github.com/samuelgursky/davinci-resolve-mcp)
 <!--END_SECTION:contributed-to-->
+
+---
+
+### 🌟 Recently Starred
+
+<!--START_SECTION:recently-starred-->
+_This section updates automatically – check back soon!_
+<!--END_SECTION:recently-starred-->
 
 ---
 

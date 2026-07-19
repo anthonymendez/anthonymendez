@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
 update_readme.py
-Fetches data from the GitHub API and rewrites three dynamic sections in README.md:
-  - working-on    : recent pushes to the user's own repos
-  - contributed-to: recent events in repos owned by others
-  - most-starred  : the user's own public repos sorted by star count
+Fetches data from the GitHub API and rewrites four dynamic sections in README.md:
+  - working-on       : recent pushes to the user's own repos
+  - contributed-to   : recent events in repos owned by others (stars excluded)
+  - most-starred     : the user's own public repos sorted by star count
+  - recently-starred : repos the user has recently starred
 """
 
 import os
@@ -92,21 +93,21 @@ def get_working_on() -> list[str]:
 
 def get_contributed_to() -> list[str]:
     """
-    Returns up to MAX_ITEMS bullet points for recent events
-    in repos NOT owned by the user (i.e. contributions to other projects).
+    Returns up to MAX_ITEMS bullet points for recent events in repos NOT owned
+    by the user. WatchEvent (stars) are excluded — they get their own section.
     """
     events = gh_get(
         f"https://api.github.com/users/{USERNAME}/events/public",
         params={"per_page": 100},
     )
 
+    # WatchEvent intentionally omitted — handled by get_recently_starred()
     EVENT_ICONS = {
         "PushEvent": ("🔨", "pushed to"),
         "PullRequestEvent": ("📬", "opened a PR in"),
         "IssueCommentEvent": ("💬", "commented in"),
         "IssuesEvent": ("🐛", "opened an issue in"),
         "ForkEvent": ("🍴", "forked"),
-        "WatchEvent": ("⭐", "starred"),
         "CreateEvent": ("✨", "created a branch in"),
     }
 
@@ -114,6 +115,10 @@ def get_contributed_to() -> list[str]:
     seen: set[str] = set()
 
     for event in events:
+        event_type = event.get("type", "")
+        # Skip stars — they belong in the recently-starred section
+        if event_type == "WatchEvent":
+            continue
         repo_name = event["repo"]["name"]
         owner = repo_name.split("/")[0]
         if owner.lower() == USERNAME.lower():
@@ -121,17 +126,37 @@ def get_contributed_to() -> list[str]:
         if repo_name in seen:
             continue
 
-        event_type = event.get("type", "")
         icon, verb = EVENT_ICONS.get(event_type, ("🔗", "was active in"))
         seen.add(repo_name)
 
-        short_name = repo_name.split("/", 1)[1]
         url = f"https://github.com/{repo_name}"
         lines.append(f"- {icon} {verb.capitalize()} [**{repo_name}**]({url})")
         if len(lines) >= MAX_ITEMS:
             break
 
     return lines or ["_No recent contributions to other repos found._"]
+
+
+def get_recently_starred() -> list[str]:
+    """
+    Returns up to MAX_ITEMS bullet points for repos the user has recently starred,
+    using the /users/{username}/starred endpoint (sorted by most recently starred).
+    """
+    starred = gh_get(
+        f"https://api.github.com/users/{USERNAME}/starred",
+        params={"per_page": MAX_ITEMS, "sort": "created", "direction": "desc"},
+    )
+
+    lines = []
+    for repo in starred:
+        name = repo["full_name"]
+        url = repo["html_url"]
+        description = repo.get("description") or ""
+        stars = repo.get("stargazers_count", 0)
+        desc_part = f" — {description}" if description else ""
+        lines.append(f"- ⭐ [**{name}**]({url}) ({stars} ★){desc_part}")
+
+    return lines or ["_No recently starred repos found._"]
 
 
 def get_most_starred() -> list[str]:
@@ -173,18 +198,21 @@ def main():
     working_on = get_working_on()
     contributed_to = get_contributed_to()
     most_starred = get_most_starred()
+    recently_starred = get_recently_starred()
 
-    print(f"  working-on     : {len(working_on)} item(s)")
-    print(f"  contributed-to : {len(contributed_to)} item(s)")
-    print(f"  most-starred   : {len(most_starred)} item(s)")
+    print(f"  working-on       : {len(working_on)} item(s)")
+    print(f"  contributed-to   : {len(contributed_to)} item(s)")
+    print(f"  most-starred     : {len(most_starred)} item(s)")
+    print(f"  recently-starred : {len(recently_starred)} item(s)")
 
     readme_path = os.path.abspath(README_PATH)
     with open(readme_path, "r", encoding="utf-8") as fh:
         content = fh.read()
 
-    content = update_section(content, "working-on",    "\n".join(working_on))
-    content = update_section(content, "contributed-to", "\n".join(contributed_to))
-    content = update_section(content, "most-starred",  "\n".join(most_starred))
+    content = update_section(content, "working-on",       "\n".join(working_on))
+    content = update_section(content, "contributed-to",   "\n".join(contributed_to))
+    content = update_section(content, "most-starred",     "\n".join(most_starred))
+    content = update_section(content, "recently-starred", "\n".join(recently_starred))
 
     with open(readme_path, "w", encoding="utf-8") as fh:
         fh.write(content)
