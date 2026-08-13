@@ -39,8 +39,8 @@
 
 <!--START_SECTION:recently-starred-->
 - ⭐ [**nekename/OpenDeck**](https://github.com/nekename/OpenDeck) (2024 ★) — Linux software for the Stream Deck with support for original Elgato Stream Deck plugins
-- ⭐ [**Hkshoonya/nvidia-broadcast-linux**](https://github.com/Hkshoonya/nvidia-broadcast-linux) (108 ★) — NV Broadcast — Unofficial NVIDIA Broadcast for Linux and other OS. AI-powered virtual camera with background removal, blur, replacement, video enhancement, and noise cancellation. GPU accelerated. Open source.
-- ⭐ [**samuelgursky/davinci-resolve-mcp**](https://github.com/samuelgursky/davinci-resolve-mcp) (2093 ★) — MCP server integration for DaVinci Resolve Studio
+- ⭐ [**Hkshoonya/nvidia-broadcast-linux**](https://github.com/Hkshoonya/nvidia-broadcast-linux) (109 ★) — NV Broadcast — Unofficial NVIDIA Broadcast for Linux and other OS. AI-powered virtual camera with background removal, blur, replacement, video enhancement, and noise cancellation. GPU accelerated. Open source.
+- ⭐ [**samuelgursky/davinci-resolve-mcp**](https://github.com/samuelgursky/davinci-resolve-mcp) (2096 ★) — MCP server integration for DaVinci Resolve Studio
 - ⭐ [**Adachi91/obs-multistream-libre**](https://github.com/Adachi91/obs-multistream-libre) (2 ★) — Ad-Removed OBS multi-streaming plugin.
 - ⭐ [**veritus-git/BadWords**](https://github.com/veritus-git/BadWords) (21 ★) — better text-based editing inside DaVinci
 <!--END_SECTION:recently-starred-->
