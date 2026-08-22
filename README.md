@@ -25,7 +25,7 @@
 ### 🤝 Latest Projects I've Contributed To
 
 <!--START_SECTION:contributed-to-->
-- 🐛 Opened an issue in [**Hkshoonya/nvidia-broadcast-linux**](https://github.com/Hkshoonya/nvidia-broadcast-linux)
+- 💬 Commented in [**Hkshoonya/nvidia-broadcast-linux**](https://github.com/Hkshoonya/nvidia-broadcast-linux)
 - 💬 Commented in [**nekename/OpenDeck**](https://github.com/nekename/OpenDeck)
 <!--END_SECTION:contributed-to-->
 
@@ -34,11 +34,11 @@
 ### 🌟 Recently Starred
 
 <!--START_SECTION:recently-starred-->
-- ⭐ [**nekename/OpenDeck**](https://github.com/nekename/OpenDeck) (2056 ★) — Linux software for the Stream Deck with support for original Elgato Stream Deck plugins
-- ⭐ [**Hkshoonya/nvidia-broadcast-linux**](https://github.com/Hkshoonya/nvidia-broadcast-linux) (118 ★) — NV Broadcast — Unofficial NVIDIA Broadcast for Linux and other OS. AI-powered virtual camera with background removal, blur, replacement, video enhancement, and noise cancellation. GPU accelerated. Open source.
-- ⭐ [**samuelgursky/davinci-resolve-mcp**](https://github.com/samuelgursky/davinci-resolve-mcp) (2231 ★) — MCP server integration for DaVinci Resolve Studio
+- ⭐ [**srwi/EverythingToolbar**](https://github.com/srwi/EverythingToolbar) (14619 ★) — Everything integration for the Windows taskbar.
+- ⭐ [**nekename/OpenDeck**](https://github.com/nekename/OpenDeck) (2057 ★) — Linux software for the Stream Deck with support for original Elgato Stream Deck plugins
+- ⭐ [**Hkshoonya/nvidia-broadcast-linux**](https://github.com/Hkshoonya/nvidia-broadcast-linux) (119 ★) — NV Broadcast — Unofficial NVIDIA Broadcast for Linux and other OS. AI-powered virtual camera with background removal, blur, replacement, video enhancement, and noise cancellation. GPU accelerated. Open source.
+- ⭐ [**samuelgursky/davinci-resolve-mcp**](https://github.com/samuelgursky/davinci-resolve-mcp) (2233 ★) — MCP server integration for DaVinci Resolve Studio
 - ⭐ [**Adachi91/obs-multistream-libre**](https://github.com/Adachi91/obs-multistream-libre) (2 ★) — Ad-Removed OBS multi-streaming plugin.
-- ⭐ [**veritus-git/BadWords**](https://github.com/veritus-git/BadWords) (23 ★) — better text-based editing for DaVinci Resolve
 <!--END_SECTION:recently-starred-->
 
 ---
