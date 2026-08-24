@@ -16,7 +16,7 @@
 ### 🔨 Latest Projects I've Been Working On
 
 <!--START_SECTION:working-on-->
-- 🔨 Pushed to [**OpenDeck**](https://github.com/anthonymendez/OpenDeck)
+_No recent pushes found._
 <!--END_SECTION:working-on-->
 
 ---
@@ -33,10 +33,10 @@
 ### 🌟 Recently Starred
 
 <!--START_SECTION:recently-starred-->
-- ⭐ [**srwi/EverythingToolbar**](https://github.com/srwi/EverythingToolbar) (14632 ★) — Everything integration for the Windows taskbar.
-- ⭐ [**nekename/OpenDeck**](https://github.com/nekename/OpenDeck) (2069 ★) — Linux software for the Stream Deck with support for original Elgato Stream Deck plugins
-- ⭐ [**Hkshoonya/nvidia-broadcast-linux**](https://github.com/Hkshoonya/nvidia-broadcast-linux) (121 ★) — NV Broadcast — Unofficial NVIDIA Broadcast for Linux and other OS. AI-powered virtual camera with background removal, blur, replacement, video enhancement, and noise cancellation. GPU accelerated. Open source.
-- ⭐ [**samuelgursky/davinci-resolve-mcp**](https://github.com/samuelgursky/davinci-resolve-mcp) (2265 ★) — MCP server integration for DaVinci Resolve Studio
+- ⭐ [**srwi/EverythingToolbar**](https://github.com/srwi/EverythingToolbar) (14635 ★) — Everything integration for the Windows taskbar.
+- ⭐ [**nekename/OpenDeck**](https://github.com/nekename/OpenDeck) (2070 ★) — Linux software for the Stream Deck with support for original Elgato Stream Deck plugins
+- ⭐ [**Hkshoonya/nvidia-broadcast-linux**](https://github.com/Hkshoonya/nvidia-broadcast-linux) (124 ★) — NV Broadcast — Unofficial NVIDIA Broadcast for Linux and other OS. AI-powered virtual camera with background removal, blur, replacement, video enhancement, and noise cancellation. GPU accelerated. Open source.
+- ⭐ [**samuelgursky/davinci-resolve-mcp**](https://github.com/samuelgursky/davinci-resolve-mcp) (2268 ★) — MCP server integration for DaVinci Resolve Studio
 - ⭐ [**Adachi91/obs-multistream-libre**](https://github.com/Adachi91/obs-multistream-libre) (2 ★) — Ad-Removed OBS multi-streaming plugin.
 <!--END_SECTION:recently-starred-->
 
