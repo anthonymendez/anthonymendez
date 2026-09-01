@@ -33,10 +33,10 @@ _No recent pushes found._
 ### 🌟 Recently Starred
 
 <!--START_SECTION:recently-starred-->
-- ⭐ [**srwi/EverythingToolbar**](https://github.com/srwi/EverythingToolbar) (14673 ★) — Everything integration for the Windows taskbar.
-- ⭐ [**nekename/OpenDeck**](https://github.com/nekename/OpenDeck) (2105 ★) — Linux software for the Stream Deck with support for original Elgato Stream Deck plugins
+- ⭐ [**srwi/EverythingToolbar**](https://github.com/srwi/EverythingToolbar) (14675 ★) — Everything integration for the Windows taskbar.
+- ⭐ [**nekename/OpenDeck**](https://github.com/nekename/OpenDeck) (2108 ★) — Linux software for the Stream Deck with support for original Elgato Stream Deck plugins
 - ⭐ [**Hkshoonya/nvidia-broadcast-linux**](https://github.com/Hkshoonya/nvidia-broadcast-linux) (138 ★) — NV Broadcast — Unofficial NVIDIA Broadcast for Linux and other OS. AI-powered virtual camera with background removal, blur, replacement, video enhancement, and noise cancellation. GPU accelerated. Open source.
-- ⭐ [**samuelgursky/davinci-resolve-mcp**](https://github.com/samuelgursky/davinci-resolve-mcp) (2352 ★) — MCP server integration for DaVinci Resolve Studio
+- ⭐ [**samuelgursky/davinci-resolve-mcp**](https://github.com/samuelgursky/davinci-resolve-mcp) (2355 ★) — MCP server integration for DaVinci Resolve Studio
 - ⭐ [**Adachi91/obs-multistream-libre**](https://github.com/Adachi91/obs-multistream-libre) (2 ★) — Ad-Removed OBS multi-streaming plugin.
 <!--END_SECTION:recently-starred-->
 
