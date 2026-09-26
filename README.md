@@ -36,7 +36,7 @@ _No recent contributions to other repos found._
 - ⭐ [**srwi/EverythingToolbar**](https://github.com/srwi/EverythingToolbar) (14801 ★) — Everything integration for the Windows taskbar.
 - ⭐ [**nekename/OpenDeck**](https://github.com/nekename/OpenDeck) (2220 ★) — Linux software for the Stream Deck with support for original Elgato Stream Deck plugins
 - ⭐ [**Hkshoonya/nvidia-broadcast-linux**](https://github.com/Hkshoonya/nvidia-broadcast-linux) (170 ★) — Open-source, unofficial NVIDIA Broadcast alternative for Linux and macOS: AI background effects, auto framing, noise removal, recording, and local meeting transcription.
-- ⭐ [**samuelgursky/davinci-resolve-mcp**](https://github.com/samuelgursky/davinci-resolve-mcp) (3157 ★) — MCP server integration for DaVinci Resolve Studio
+- ⭐ [**samuelgursky/davinci-resolve-mcp**](https://github.com/samuelgursky/davinci-resolve-mcp) (3165 ★) — MCP server integration for DaVinci Resolve Studio
 <!--END_SECTION:recently-starred-->
 
 ---
