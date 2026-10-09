@@ -7,6 +7,8 @@ on:
   # Allows manual trigger from the Actions tab
   workflow_dispatch:
 
+concurrency: update-readme
+
 jobs:
   update-readme:
     runs-on: ubuntu-latest
@@ -37,4 +39,5 @@ jobs:
           git add README.md
           # Only commit if something actually changed
           git diff --staged --quiet || git commit -m "chore: update dynamic README sections [skip ci]"
+          git pull --rebase
           git push

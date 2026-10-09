@@ -15,6 +15,7 @@ import requests
 
 USERNAME = "anthonymendez"
 README_PATH = os.path.join(os.path.dirname(__file__), "..", "README.md")
+PROFILE_REPO = f"{USERNAME}/{USERNAME}"
 MAX_ITEMS = 5
 
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
@@ -40,6 +41,31 @@ def gh_get(url: str, params: dict = None) -> list | dict:
     return response.json()
 
 
+def gh_get_all(url: str, params: dict = None) -> list:
+    """GitHub API GET that follows pagination links."""
+    items = []
+    while url:
+        response = requests.get(url, headers=HEADERS, params=params, timeout=15)
+        response.raise_for_status()
+        items.extend(response.json())
+        url = response.links.get("next", {}).get("url")
+        params = None  # the next link already carries the query string
+    return items
+
+
+def escape_md(text: str, max_len: int = 160) -> str:
+    """Escape Markdown/HTML metacharacters in untrusted text and truncate it."""
+    text = " ".join(text.split())
+    if len(text) > max_len:
+        text = text[: max_len - 1].rstrip() + "…"
+    return re.sub(r"([\\`*_\[\]()<>!#|~])", r"\\\1", text)
+
+
+def format_count(n: int) -> str:
+    """Round large counts (14883 -> 14.9k) so small changes don't churn the README."""
+    return f"{n / 1000:.1f}k" if n >= 1000 else str(n)
+
+
 def update_section(content: str, section_name: str, new_body: str) -> str:
     """Replace the content between section comment markers."""
     pattern = (
@@ -47,7 +73,7 @@ def update_section(content: str, section_name: str, new_body: str) -> str:
         r".*?"
         rf"(<!--END_SECTION:{re.escape(section_name)}-->)"
     )
-    replacement = rf"\1\n{new_body}\n\2"
+    replacement = lambda m: f"{m[1]}\n{new_body}\n{m[2]}"
     updated, count = re.subn(pattern, replacement, content, flags=re.DOTALL)
     if count == 0:
         print(f"WARNING: section '{section_name}' markers not found in README.", file=sys.stderr)
@@ -58,16 +84,33 @@ def update_section(content: str, section_name: str, new_body: str) -> str:
 # Data fetchers
 # ---------------------------------------------------------------------------
 
-def get_working_on() -> list[str]:
-    """
-    Returns up to MAX_ITEMS bullet points for recent push events
-    in repos owned by the user.
-    """
-    events = gh_get(
+def get_events() -> list[dict]:
+    """Recent public events for the user (the API keeps roughly the last 30 days)."""
+    return gh_get(
         f"https://api.github.com/users/{USERNAME}/events/public",
         params={"per_page": 100},
     )
 
+
+def get_own_repos() -> list[dict]:
+    """All of the user's own public repos, excluding forks, archived repos and this profile repo."""
+    repos = gh_get_all(
+        f"https://api.github.com/users/{USERNAME}/repos",
+        params={"per_page": 100, "type": "owner", "sort": "pushed"},
+    )
+    return [
+        r for r in repos
+        if not r.get("fork") and not r.get("archived")
+        and r["full_name"].lower() != PROFILE_REPO.lower()
+    ]
+
+
+def get_working_on(events: list[dict], own_repos: list[dict]) -> list[str]:
+    """
+    Returns up to MAX_ITEMS bullet points for recent push events
+    in repos owned by the user. Falls back to the most recently pushed
+    repos when the events window has no pushes.
+    """
     lines = []
     seen: set[str] = set()
 
@@ -77,6 +120,8 @@ def get_working_on() -> list[str]:
         repo_name = event["repo"]["name"]
         owner = repo_name.split("/")[0]
         if owner.lower() != USERNAME.lower():
+            continue
+        if repo_name.lower() == PROFILE_REPO.lower():
             continue
         if repo_name in seen:
             continue
@@ -88,53 +133,79 @@ def get_working_on() -> list[str]:
         if len(lines) >= MAX_ITEMS:
             break
 
+    if not lines:
+        for repo in own_repos[:MAX_ITEMS]:
+            lines.append(f"- 🔨 [**{repo['name']}**]({repo['html_url']})")
+
     return lines or ["_No recent pushes found._"]
 
 
-def get_contributed_to() -> list[str]:
+def describe_event(event: dict) -> tuple[str, str] | None:
+    """Returns (icon, verb) for an event, or None if it shouldn't be shown."""
+    event_type = event.get("type", "")
+    payload = event.get("payload") or {}
+    action = payload.get("action")
+
+    if event_type == "PushEvent":
+        return "🔨", "Pushed to"
+    if event_type == "PullRequestEvent":
+        if action == "opened":
+            return "📬", "Opened a PR in"
+        if action == "closed":
+            merged = (payload.get("pull_request") or {}).get("merged")
+            return "📬", "Merged a PR in" if merged else "Closed a PR in"
+        return None
+    if event_type == "PullRequestReviewEvent":
+        return "👀", "Reviewed a PR in"
+    if event_type == "IssueCommentEvent":
+        return "💬", "Commented in"
+    if event_type == "IssuesEvent":
+        if action == "opened":
+            return "🐛", "Opened an issue in"
+        if action == "closed":
+            return "🐛", "Closed an issue in"
+        return None
+    if event_type == "ForkEvent":
+        return "🍴", "Forked"
+    if event_type == "CreateEvent":
+        ref_type = payload.get("ref_type")
+        if ref_type in ("branch", "tag"):
+            return "✨", f"Created a {ref_type} in"
+        return None
+    # WatchEvent (stars) excluded — handled by get_recently_starred()
+    if event_type == "WatchEvent":
+        return None
+    return "🔗", "Was active in"
+
+
+def get_contributed_to(events: list[dict]) -> list[str]:
     """
     Returns up to MAX_ITEMS bullet points for recent events in repos NOT owned
-    by the user. WatchEvent (stars) are excluded — they get their own section.
+    by the user. Returns an empty list when there is nothing to show, so the
+    caller can keep the existing section.
     """
-    events = gh_get(
-        f"https://api.github.com/users/{USERNAME}/events/public",
-        params={"per_page": 100},
-    )
-
-    # WatchEvent intentionally omitted — handled by get_recently_starred()
-    EVENT_ICONS = {
-        "PushEvent": ("🔨", "pushed to"),
-        "PullRequestEvent": ("📬", "opened a PR in"),
-        "IssueCommentEvent": ("💬", "commented in"),
-        "IssuesEvent": ("🐛", "opened an issue in"),
-        "ForkEvent": ("🍴", "forked"),
-        "CreateEvent": ("✨", "created a branch in"),
-    }
-
     lines = []
     seen: set[str] = set()
 
     for event in events:
-        event_type = event.get("type", "")
-        # Skip stars — they belong in the recently-starred section
-        if event_type == "WatchEvent":
-            continue
         repo_name = event["repo"]["name"]
         owner = repo_name.split("/")[0]
         if owner.lower() == USERNAME.lower():
             continue
         if repo_name in seen:
             continue
-
-        icon, verb = EVENT_ICONS.get(event_type, ("🔗", "was active in"))
+        described = describe_event(event)
+        if described is None:
+            continue
+        icon, verb = described
         seen.add(repo_name)
 
         url = f"https://github.com/{repo_name}"
-        lines.append(f"- {icon} {verb.capitalize()} [**{repo_name}**]({url})")
+        lines.append(f"- {icon} {verb} [**{repo_name}**]({url})")
         if len(lines) >= MAX_ITEMS:
             break
 
-    return lines or ["_No recent contributions to other repos found._"]
+    return lines
 
 
 def get_recently_starred() -> list[str]:
@@ -149,28 +220,23 @@ def get_recently_starred() -> list[str]:
 
     lines = []
     for repo in starred:
-        name = repo["full_name"]
+        name = escape_md(repo["full_name"])
         url = repo["html_url"]
-        description = repo.get("description") or ""
-        stars = repo.get("stargazers_count", 0)
+        description = escape_md(repo.get("description") or "")
+        stars = format_count(repo.get("stargazers_count", 0))
         desc_part = f" — {description}" if description else ""
         lines.append(f"- ⭐ [**{name}**]({url}) ({stars} ★){desc_part}")
 
     return lines or ["_No recently starred repos found._"]
 
 
-def get_most_starred() -> list[str]:
+def get_most_starred(own_repos: list[dict]) -> list[str]:
     """
     Returns up to MAX_ITEMS bullet points for the user's own public repos
     sorted by star count (descending).
     """
-    repos = gh_get(
-        f"https://api.github.com/users/{USERNAME}/repos",
-        params={"per_page": 100, "type": "owner", "sort": "updated"},
-    )
-
     repos_sorted = sorted(
-        repos,
+        own_repos,
         key=lambda r: r.get("stargazers_count", 0),
         reverse=True,
     )[:MAX_ITEMS]
@@ -180,7 +246,7 @@ def get_most_starred() -> list[str]:
         stars = repo.get("stargazers_count", 0)
         name = repo["name"]
         url = repo["html_url"]
-        description = repo.get("description") or ""
+        description = escape_md(repo.get("description") or "")
         star_badge = f"⭐ {stars}"
         desc_part = f" — {description}" if description else ""
         lines.append(f"- [{star_badge} **{name}**]({url}){desc_part}")
@@ -195,9 +261,12 @@ def get_most_starred() -> list[str]:
 def main():
     print(f"Fetching data for @{USERNAME} …")
 
-    working_on = get_working_on()
-    contributed_to = get_contributed_to()
-    most_starred = get_most_starred()
+    events = get_events()
+    own_repos = get_own_repos()
+
+    working_on = get_working_on(events, own_repos)
+    contributed_to = get_contributed_to(events)
+    most_starred = get_most_starred(own_repos)
     recently_starred = get_recently_starred()
 
     print(f"  working-on       : {len(working_on)} item(s)")
@@ -210,7 +279,9 @@ def main():
         content = fh.read()
 
     content = update_section(content, "working-on",       "\n".join(working_on))
-    content = update_section(content, "contributed-to",   "\n".join(contributed_to))
+    # Keep the existing section rather than blanking it when the events window is empty
+    if contributed_to:
+        content = update_section(content, "contributed-to", "\n".join(contributed_to))
     content = update_section(content, "most-starred",     "\n".join(most_starred))
     content = update_section(content, "recently-starred", "\n".join(recently_starred))
 

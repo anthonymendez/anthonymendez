@@ -16,5 +16,5 @@ if [[ "$LOCAL" == "$REMOTE" ]]; then
 fi
 
 echo "⬇️  Merging origin/$BRANCH..."
-git merge --no-edit origin "$BRANCH"
+git merge --no-edit "origin/$BRANCH"
 echo "✅ Merged. Local branch is now up to date."
