@@ -16,7 +16,7 @@
 ### 🔨 Latest Projects I've Been Working On
 
 <!--START_SECTION:working-on-->
-_No recent pushes found._
+- 🔨 Pushed to [**scene-tree-view**](https://github.com/anthonymendez/scene-tree-view)
 <!--END_SECTION:working-on-->
 
 ---
@@ -33,10 +33,10 @@ _No recent contributions to other repos found._
 
 <!--START_SECTION:recently-starred-->
 - ⭐ [**ShadowOfHeaven-Me/Modern-NotTooExpensive**](https://github.com/ShadowOfHeaven-Me/Modern-NotTooExpensive) (2 ★) — Removes "Too expensive" from anvils. Pretty much it
-- ⭐ [**srwi/EverythingToolbar**](https://github.com/srwi/EverythingToolbar) (14883 ★) — Everything integration for the Windows taskbar.
-- ⭐ [**nekename/OpenDeck**](https://github.com/nekename/OpenDeck) (2254 ★) — Linux software for the Stream Deck with support for original Elgato Stream Deck plugins
-- ⭐ [**Hkshoonya/nvidia-broadcast-linux**](https://github.com/Hkshoonya/nvidia-broadcast-linux) (187 ★) — Open-source, unofficial NVIDIA Broadcast alternative for Linux and macOS: AI background effects, auto framing, noise removal, recording, and local meeting transcription.
-- ⭐ [**samuelgursky/davinci-resolve-mcp**](https://github.com/samuelgursky/davinci-resolve-mcp) (3437 ★) — MCP server integration for DaVinci Resolve Studio
+- ⭐ [**srwi/EverythingToolbar**](https://github.com/srwi/EverythingToolbar) (14.9k ★) — Everything integration for the Windows taskbar.
+- ⭐ [**nekename/OpenDeck**](https://github.com/nekename/OpenDeck) (2.3k ★) — Linux software for the Stream Deck with support for original Elgato Stream Deck plugins
+- ⭐ [**Hkshoonya/nvidia-broadcast-linux**](https://github.com/Hkshoonya/nvidia-broadcast-linux) (187 ★) — Open-source, unofficial NVIDIA Broadcast alternative for Linux and macOS: AI background effects, auto framing, noise removal, recording, and local meeting tran…
+- ⭐ [**samuelgursky/davinci-resolve-mcp**](https://github.com/samuelgursky/davinci-resolve-mcp) (3.4k ★) — MCP server integration for DaVinci Resolve Studio
 <!--END_SECTION:recently-starred-->
 
 ---
@@ -47,6 +47,6 @@ _No recent contributions to other repos found._
 - [⭐ 4 **NR2003-on-Linux**](https://github.com/anthonymendez/NR2003-on-Linux) — This is a short guide of how to get NASCAR Racing 2003 Season working on Linux with Lutris and Wine.
 - [⭐ 2 **GoFish-in-C**](https://github.com/anthonymendez/GoFish-in-C) — GoFish in C
 - [⭐ 1 **Right-Click-Force-Quit-on-KDE-Plasma-Task-Manager**](https://github.com/anthonymendez/Right-Click-Force-Quit-on-KDE-Plasma-Task-Manager) — Adds a "Force Quit" option to the right-click context menu of applications in the KDE Plasma 6 taskbar.
-- [⭐ 1 **scene-tree-view**](https://github.com/anthonymendez/scene-tree-view) — OBS Plugin - Scene Folder Tree
 - [⭐ 1 **Improve-Windows-11**](https://github.com/anthonymendez/Improve-Windows-11) — This is a guide I wrote for myself to improve Windows 11 to my liking. It takes you from preparation, install, to final tweaks etc.
+- [⭐ 0 **linux-install-obs-aitum-multistream**](https://github.com/anthonymendez/linux-install-obs-aitum-multistream) — Install OBS Aitum Multistream for Linux
 <!--END_SECTION:most-starred-->
