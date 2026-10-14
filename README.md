@@ -32,7 +32,7 @@ _No recent contributions to other repos found._
 ### 🌟 Recently Starred
 
 <!--START_SECTION:recently-starred-->
-- ⭐ [**ARahim3/DigUp**](https://github.com/ARahim3/DigUp) (3.2k ★) — Search your Mac by what's in your files: photos, PDFs, recordings, videos and code. On-device, built on Google DeepMind's EmbeddingGemma 2.
+- ⭐ [**ARahim3/DigUp**](https://github.com/ARahim3/DigUp) (3.5k ★) — Search your Mac by what's in your files: photos, PDFs, recordings, videos and code. On-device, built on Google DeepMind's EmbeddingGemma 2.
 - ⭐ [**ShadowOfHeaven-Me/Modern-NotTooExpensive**](https://github.com/ShadowOfHeaven-Me/Modern-NotTooExpensive) (2 ★) — Removes "Too expensive" from anvils. Pretty much it
 - ⭐ [**srwi/EverythingToolbar**](https://github.com/srwi/EverythingToolbar) (14.9k ★) — Everything integration for the Windows taskbar.
 - ⭐ [**nekename/OpenDeck**](https://github.com/nekename/OpenDeck) (2.3k ★) — Linux software for the Stream Deck with support for original Elgato Stream Deck plugins
@@ -44,7 +44,7 @@ _No recent contributions to other repos found._
 ### ⭐ Most Starred Projects
 
 <!--START_SECTION:most-starred-->
-- [⭐ 4 **NR2003-on-Linux**](https://github.com/anthonymendez/NR2003-on-Linux) — This is a short guide of how to get NASCAR Racing 2003 Season working on Linux with Lutris and Wine.
+- [⭐ 5 **NR2003-on-Linux**](https://github.com/anthonymendez/NR2003-on-Linux) — This is a short guide of how to get NASCAR Racing 2003 Season working on Linux with Lutris and Wine.
 - [⭐ 2 **GoFish-in-C**](https://github.com/anthonymendez/GoFish-in-C) — GoFish in C
 - [⭐ 1 **linux-install-obs-aitum-multistream**](https://github.com/anthonymendez/linux-install-obs-aitum-multistream) — Install OBS Aitum Multistream for Linux
 - [⭐ 1 **Right-Click-Force-Quit-on-KDE-Plasma-Task-Manager**](https://github.com/anthonymendez/Right-Click-Force-Quit-on-KDE-Plasma-Task-Manager) — Adds a "Force Quit" option to the right-click context menu of applications in the KDE Plasma 6 taskbar.
