@@ -34,7 +34,7 @@ _No recent contributions to other repos found._
 
 <!--START_SECTION:recently-starred-->
 - ⭐ [**PawDelta/brindle**](https://github.com/PawDelta/brindle) (2 ★) — Run coding agents in parallel, each on its own git branch, with a supervisor that delegates, reviews, and merges
-- ⭐ [**ARahim3/DigUp**](https://github.com/ARahim3/DigUp) (5.3k ★) — Search your computer by what's in your files: photos, PDFs, documents, recordings, videos and code. On-device on Mac, Windows and Linux, built on Google DeepMi…
+- ⭐ [**ARahim3/DigUp**](https://github.com/ARahim3/DigUp) (5.4k ★) — Search your computer by what's in your files: photos, PDFs, documents, recordings, videos and code. On-device on Mac, Windows and Linux, built on Google DeepMi…
 - ⭐ [**ShadowOfHeaven-Me/Modern-NotTooExpensive**](https://github.com/ShadowOfHeaven-Me/Modern-NotTooExpensive) (2 ★) — Removes "Too expensive" from anvils. Pretty much it
 - ⭐ [**srwi/EverythingToolbar**](https://github.com/srwi/EverythingToolbar) (15.0k ★) — Everything integration for the Windows taskbar.
 - ⭐ [**nekename/OpenDeck**](https://github.com/nekename/OpenDeck) (2.3k ★) — Linux software for the Stream Deck with support for original Elgato Stream Deck plugins
