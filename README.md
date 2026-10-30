@@ -37,7 +37,7 @@ _No recent contributions to other repos found._
 - ⭐ [**ARahim3/DigUp**](https://github.com/ARahim3/DigUp) (6.0k ★) — Search your computer by what's in your files: photos, PDFs, documents, recordings, videos and code. On-device on Mac, Windows and Linux, built on Google DeepMi…
 - ⭐ [**ShadowOfHeaven-Me/Modern-NotTooExpensive**](https://github.com/ShadowOfHeaven-Me/Modern-NotTooExpensive) (2 ★) — Removes "Too expensive" from anvils. Pretty much it
 - ⭐ [**srwi/EverythingToolbar**](https://github.com/srwi/EverythingToolbar) (15.0k ★) — Everything integration for the Windows taskbar.
-- ⭐ [**nekename/OpenDeck**](https://github.com/nekename/OpenDeck) (2.3k ★) — Linux software for the Stream Deck with support for original Elgato Stream Deck plugins
+- ⭐ [**nekename/OpenDeck**](https://github.com/nekename/OpenDeck) (2.4k ★) — Linux software for the Stream Deck with support for original Elgato Stream Deck plugins
 <!--END_SECTION:recently-starred-->
 
 ---
