@@ -33,7 +33,7 @@ _No recent contributions to other repos found._
 ### 🌟 Recently Starred
 
 <!--START_SECTION:recently-starred-->
-- ⭐ [**amosblomqvist/learnharness**](https://github.com/amosblomqvist/learnharness) (5.8k ★) — Agent harness for learning difficult things.
+- ⭐ [**amosblomqvist/learnharness**](https://github.com/amosblomqvist/learnharness) (5.9k ★) — Agent harness for learning difficult things.
 - ⭐ [**PawDelta/brindle**](https://github.com/PawDelta/brindle) (2 ★) — Run coding agents in parallel, each on its own git branch, with a supervisor that delegates, reviews, and merges
 - ⭐ [**ARahim3/DigUp**](https://github.com/ARahim3/DigUp) (6.3k ★) — Search your computer by what's in your files: photos, PDFs, documents, recordings, videos and code. On-device on Mac, Windows and Linux, built on Google DeepMi…
 - ⭐ [**ShadowOfHeaven-Me/Modern-NotTooExpensive**](https://github.com/ShadowOfHeaven-Me/Modern-NotTooExpensive) (2 ★) — Removes "Too expensive" from anvils. Pretty much it
@@ -46,8 +46,8 @@ _No recent contributions to other repos found._
 
 <!--START_SECTION:most-starred-->
 - [⭐ 5 **NR2003-on-Linux**](https://github.com/anthonymendez/NR2003-on-Linux) — This is a short guide of how to get NASCAR Racing 2003 Season working on Linux with Lutris and Wine.
+- [⭐ 2 **linux-install-obs-aitum-multistream**](https://github.com/anthonymendez/linux-install-obs-aitum-multistream) — Install OBS Aitum Multistream for Linux
 - [⭐ 2 **GoFish-in-C**](https://github.com/anthonymendez/GoFish-in-C) — GoFish in C
-- [⭐ 1 **linux-install-obs-aitum-multistream**](https://github.com/anthonymendez/linux-install-obs-aitum-multistream) — Install OBS Aitum Multistream for Linux
 - [⭐ 1 **Right-Click-Force-Quit-on-KDE-Plasma-Task-Manager**](https://github.com/anthonymendez/Right-Click-Force-Quit-on-KDE-Plasma-Task-Manager) — Adds a "Force Quit" option to the right-click context menu of applications in the KDE Plasma 6 taskbar.
 - [⭐ 1 **Improve-Windows-11**](https://github.com/anthonymendez/Improve-Windows-11) — This is a guide I wrote for myself to improve Windows 11 to my liking. It takes you from preparation, install, to final tweaks etc.
 <!--END_SECTION:most-starred-->
