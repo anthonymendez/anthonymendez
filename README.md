@@ -34,7 +34,7 @@ _No recent contributions to other repos found._
 
 <!--START_SECTION:recently-starred-->
 - ⭐ [**MrMicky-FR/WorldEditSelectionVisualizer**](https://github.com/MrMicky-FR/WorldEditSelectionVisualizer) (71 ★) — Visualize your WorldEdit selection with particles and without any mod.
-- ⭐ [**amosblomqvist/learnharness**](https://github.com/amosblomqvist/learnharness) (9.1k ★) — Agent harness for learning difficult things.
+- ⭐ [**amosblomqvist/learnharness**](https://github.com/amosblomqvist/learnharness) (9.2k ★) — Agent harness for learning difficult things.
 - ⭐ [**PawDelta/brindle**](https://github.com/PawDelta/brindle) (4 ★) — Run coding agents in parallel, each on its own git branch, with a supervisor that delegates, reviews, and merges
 - ⭐ [**ARahim3/DigUp**](https://github.com/ARahim3/DigUp) (6.4k ★) — Search your computer by what's in your files: photos, PDFs, documents, recordings, videos and code. On-device on Mac, Windows and Linux, built on Google DeepMi…
 - ⭐ [**ShadowOfHeaven-Me/Modern-NotTooExpensive**](https://github.com/ShadowOfHeaven-Me/Modern-NotTooExpensive) (2 ★) — Removes "Too expensive" from anvils. Pretty much it
