@@ -16,6 +16,7 @@
 ### 🔨 Latest Projects I've Been Working On
 
 <!--START_SECTION:working-on-->
+- 🔨 Pushed to [**scene-tree-view**](https://github.com/anthonymendez/scene-tree-view)
 - 🔨 Pushed to [**NTSCRT-Plugins**](https://github.com/anthonymendez/NTSCRT-Plugins)
 <!--END_SECTION:working-on-->
 
@@ -34,7 +35,7 @@ _No recent contributions to other repos found._
 <!--START_SECTION:recently-starred-->
 - ⭐ [**narrowstacks/deep-field**](https://github.com/narrowstacks/deep-field) (3 ★) — Deep Field puts a moving space scene behind your windows: a lensed black hole, a spiral galaxy, an aurora seen from orbit, 19 scenes in all. Each one starts fr…
 - ⭐ [**MrMicky-FR/WorldEditSelectionVisualizer**](https://github.com/MrMicky-FR/WorldEditSelectionVisualizer) (71 ★) — Visualize your WorldEdit selection with particles and without any mod.
-- ⭐ [**amosblomqvist/learnharness**](https://github.com/amosblomqvist/learnharness) (12.4k ★) — Agent harness for learning difficult things.
+- ⭐ [**amosblomqvist/learnharness**](https://github.com/amosblomqvist/learnharness) (12.5k ★) — Agent harness for learning difficult things.
 - ⭐ [**PawDelta/brindle**](https://github.com/PawDelta/brindle) (4 ★) — Run coding agents in parallel, each on its own git branch, with a supervisor that delegates, reviews, and merges
 - ⭐ [**ARahim3/DigUp**](https://github.com/ARahim3/DigUp) (6.5k ★) — Search your computer by what's in your files: photos, PDFs, documents, recordings, videos and code. On-device on Mac, Windows and Linux, built on Google DeepMi…
 <!--END_SECTION:recently-starred-->
